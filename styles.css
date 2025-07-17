@@ -139,10 +139,18 @@ input[type="text"],input[type="email"]{
 
 input[type="checkbox"]{
     transform: scale(1.3);
+    
+}
+input[type="checkbox"]:checked{
+    display: none;
+    
 }
 input[type="checkbox"]:checked ~ .img-check{
     z-index: 10;
     display: block;
+}
+input[type="checkbox"]:checked ~ label{
+    margin-left: 20px;
 }
 .img-check{
     max-width: 100%;
@@ -159,10 +167,7 @@ input[type="checkbox"]:checked ~ .img-check{
     color:var(--White);
     border-radius: 7px;
 }
-input[type="checkbox"]:checked{
-    background-color: var(--Green600medium);
-    color:var(--White)
-}
+
 
 @media (max-width:800px) {
     .form__container{
