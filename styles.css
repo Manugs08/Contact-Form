@@ -177,7 +177,6 @@ input[type="checkbox"]:checked ~ label{
         width: 70%;
         height: 100%;
         padding-bottom: 10px;
-        overflow-y: scroll;
     }
     .form__name-container{
         flex-direction: column;
@@ -199,7 +198,7 @@ input[type="checkbox"]:checked ~ label{
     }
 }
 
-@media (max-height:900px){
+@media (max-height:700px){
     .form{
         overflow-y: scroll;
     }
