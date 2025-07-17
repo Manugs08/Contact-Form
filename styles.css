@@ -199,10 +199,12 @@ input[type="checkbox"]:checked ~ label{
 }
 
 @media (max-height:600px){
-    
+    .form__container{
+        height: 130dvh;
+    }
     
     .form{
-        width: 100%;
+        width: 200%;
         overflow-y: scroll;
     }
 }
