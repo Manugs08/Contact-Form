@@ -138,14 +138,14 @@ input[type="text"],input[type="email"]{
 }
 
 input[type="checkbox"]{
-    transform: scale(1.6);
+    transform: scale(1.3);
 }
 input[type="checkbox"]:checked ~ .img-check{
     z-index: 10;
     display: block;
 }
 .img-check{
-    max-width: 10%;
+    max-width: 100%;
     position: absolute;
     z-index: -10;
     left: 17px;
