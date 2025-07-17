@@ -198,8 +198,11 @@ input[type="checkbox"]:checked ~ label{
     }
 }
 
-@media (max-height:700px){
+@media (max-height:600px){
+    
+    
     .form{
+        width: 100%;
         overflow-y: scroll;
     }
 }
