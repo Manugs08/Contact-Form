@@ -194,6 +194,11 @@ input[type="checkbox"]:checked{
     }
 }
 
+@media (max-height:900px){
+    .form{
+        overflow-y: scroll;
+    }
+}
 .advertir{
     color:var(--Red);
     font-size: 14px;
