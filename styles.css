@@ -1,0 +1,225 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    --Green200lighter: hsl(148, 38%, 91%);
+    --Green600medium: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
+    --White: hsl(0, 0%, 100%);
+    --Grey500medium: hsl(186, 15%, 59%);
+    --Grey900darker: hsl(187, 24%, 22%);
+    font-size: 16px;
+    font-family: "Karla", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+}
+body,div,form,h2,p,span,input,textarea{
+    margin: 0;
+    padding: 0;
+}
+
+.form__container{
+    width: 90%;
+    height: 107dvh;
+    background-color: var(--Green200lighter);
+    box-shadow: 0 0 10px #0004;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(.85);
+    position: relative;
+    padding-top: 70px;
+}
+.form{
+    width: 45%;
+    height: 100%;
+    background-color: var(--White);
+    border-radius: 8px;
+    padding: 20px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap:12px;
+    transform: scale(.9);
+}
+
+
+.asterisco{
+    color:var(--Green600medium)
+}
+.form__name-container{
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap;
+}
+.name-container{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    width: 48%;
+}
+
+#name:hover,#surname:hover,#mail:hover,#msg:hover{
+    cursor:pointer;
+    border-color:var(--Green600medium)
+}
+#name:focus,#surname:focus,#mail:focus,#msg:focus{
+    border-color:var(--Green600medium);
+    outline: none;
+}
+#name,#surname,#mail,#msg{
+    color:var(--Grey900darker)
+}
+.form__mail-container{
+    display: flex;
+    flex-direction: column;
+    gap:5px
+}
+.form__query-container{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    flex-wrap: wrap;
+}
+.query-container{
+    display: flex;
+    gap:10px
+}
+.radio-container{
+    border:1px solid var(--Grey500medium);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    width: 49%;
+    border-radius: 7px;
+}
+.radio-container:hover{
+    border-color:var(--Green600medium)
+}
+.radio-container:has(input[type="radio"]:focus) {
+    background-color: var(--Green200lighter);
+    border-color: var(--Green600medium);
+}
+input[type="radio"] {
+    accent-color: var(--Green600medium) ;
+    transform: scale(1.2);
+    margin-left: 5px;
+}
+.form__msg-container{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+
+input[type="text"],input[type="email"]{
+    padding: 8px;
+    border-radius: 7px;
+    border: 1px solid var(--Grey500medium);
+    width: 100%;
+}
+#msg{
+    resize: none;
+    border-radius: 7px;
+    padding: 5px;
+}
+.form__checkbox-container{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    gap:13px
+}
+
+input[type="checkbox"]{
+    transform: scale(1.6);
+}
+input[type="checkbox"]:checked ~ .img-check{
+    z-index: 10;
+    display: block;
+}
+.img-check{
+    max-width: 10%;
+    position: absolute;
+    z-index: -10;
+    left: 17px;
+    display: none;
+}
+
+.submit{
+    padding: 13px;
+    background-color: var(--Green600medium);
+    border:none;
+    color:var(--White);
+    border-radius: 7px;
+}
+input[type="checkbox"]:checked{
+    background-color: var(--Green600medium);
+    color:var(--White)
+}
+
+@media (max-width:800px) {
+    .form__container{
+        height: 110dvh;
+    }
+    .form{
+        width: 70%;
+        height: 100%;
+        padding-bottom: 10px;
+    }
+    .form__name-container{
+        flex-direction: column;
+    }
+    .name-container{
+        width: 100%;
+    }
+    .query-container{
+        flex-direction: column;
+    }
+    .radio-container{
+        width: 100%;
+    }
+    #general,#support{
+        margin-left: 15px;
+    }
+    .success-container{
+        min-width: 60%;
+    }
+}
+
+.advertir{
+    color:var(--Red);
+    font-size: 14px;
+    display: none;
+}
+
+.success-container{
+    width: 30%;
+    height: 80px;
+    background-color: var(--Grey900darker);
+    position: absolute;
+    top:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:var(--White);
+    gap:10px;
+    border-radius: 7px;
+}
+.confirmacion-container{
+    display: flex;
+    gap:10px;
+    margin-left:15px ;
+    flex-wrap: wrap;
+}
+.agradecer{
+    color:var(--Grey500medium);
+    margin-left: 15px;
+    font-size: 12px;
+}

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="form__container">
+        <form class="form" novalidate>
+            <h2>Contact Us</h2>
+            <div class="form__name-container">
+                <div class="name-container">
+                    <label for="name">First Name <span class="asterisco">*</span></label>
+                        <input type="text" id="name" value="">
+                        <p class="advertir" id="advertirNombre">This field is required</p>
+                </div>
+                <div class="name-container">
+                    <label for="surname">Last Name <span class="asterisco">*</span></label>
+                        <input type="text" id="surname" value="">
+                        <p class="advertir" id="advertirApellido">This field is required</p>
+                </div>
+            </div>
+            <div class="form__mail-container">
+                <label for="mail">Email Adress <span class="asterisco">*</span></label>
+                    <input type="email" id="mail" value="">
+                    <p class="advertir" id="advertirMail">Please enter a valid email adress</p>
+            </div>
+            <div class="form__query-container">
+                <label>Query Type <span class="asterisco">*</span></label>
+                <div class="query-container">
+                    <div class="radio-container">
+                        <input type="radio" name="request" value="general" id="general"> 
+                        <label for="general">General Enquiry</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="request" value="support" id="support"> 
+                        <label for="support">Support Request</label>
+                    </div>
+                </div>
+                <p class="advertir" id="advertirQuery">Please select a query type</p>
+            </div>
+            <div class="form__msg-container">
+                <label for="msg">Message <span class="asterisco">*</span></label>
+                    <textarea id="msg"  rows="5" cols="100" value=""></textarea>
+                <p class="advertir" id="advertirMsg">This field is required</p>
+            </div>
+            <div class="form__checkbox-container">
+                <div class="checkbox-container">
+                    <input type="checkbox">
+                    <label class="checkbox-sentence">I consent to being contacted by the team <span class="asterisco">*</span></label>
+                    <img class="img-check" src="images/icon-checkbox-check.svg">
+                </div>
+                <p class="advertir" id="advertirCheckbox">To submit this form,please consent to being contacted</p>
+            </div>
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
